@@ -1,0 +1,16 @@
+<h2>Products</h2>
+{{ products | json }}
+<ul>
+  <li *ngFor="let product of products" [title]="product.description">
+    <h3>{{ product.name }}</h3>
+    <p *ngIf="product.description" [class.cher]="product.price > 500">
+      {{ product.description }}
+    </p>
+  </li>
+</ul>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
