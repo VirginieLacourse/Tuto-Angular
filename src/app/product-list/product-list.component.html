@@ -2,11 +2,17 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details'">
+    <!-- Le titre d'un produit en lien avec le directif 
+      RouterLink permet de modifier la route ou l'url -> url.com/products/[product.id] -->
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+    >
       {{ product.name }}
     </a>
   </h3>
 
+  <!-- La desciption d'un produit -->
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
   <button type="button" (click)="share()">Share</button>
