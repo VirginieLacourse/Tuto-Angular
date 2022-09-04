@@ -18,6 +18,7 @@ import { CartComponent } from './cart/cart.component';
       { path: '', component: ProductListComponent },
       // Permettre le chemin à un produit
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ]),
   ],
   declarations: [
